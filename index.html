@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRADE WITH NAVJOT BRAR</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#040816;
+overflow-x:hidden;
+color:white;
+}
+
+/* Animated Background */
+
+.bgGlow1{
+position:fixed;
+width:500px;
+height:500px;
+background:#00c2ff;
+filter:blur(170px);
+opacity:0.16;
+top:-160px;
+left:-160px;
+animation:moveGlow1 8s infinite alternate;
+z-index:0;
+}
+
+.bgGlow2{
+position:fixed;
+width:420px;
+height:420px;
+background:#2563eb;
+filter:blur(170px);
+opacity:0.16;
+bottom:-150px;
+right:-150px;
+animation:moveGlow2 8s infinite alternate;
+z-index:0;
+}
+
+@keyframes moveGlow1{
+0%{transform:translate(0,0);}
+100%{transform:translate(90px,60px);}
+}
+
+@keyframes moveGlow2{
+0%{transform:translate(0,0);}
+100%{transform:translate(-70px,-50px);}
+}
+
+/* Main Container */
+
+.container{
+position:relative;
+z-index:2;
+width:100%;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:18px;
+}
+
+/* Main Card */
+
+.card{
+width:100%;
+max-width:510px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:34px;
+padding:30px;
+text-align:center;
+box-shadow:0 0 50px rgba(0,0,0,0.55);
+position:relative;
+overflow:hidden;
+}
+
+/* Shine Layer */
+
+.card::before{
+content:'';
+position:absolute;
+top:0;
+left:-140%;
+width:60%;
+height:100%;
+background:rgba(255,255,255,0.06);
+transform:skewX(-20deg);
+animation:cardShine 5s linear infinite;
+}
+
+@keyframes cardShine{
+100%{
+left:160%;
+}
+}
+
+/* Badge */
+
+.badge{
+display:inline-block;
+padding:8px 18px;
+border-radius:50px;
+background:rgba(0,194,255,0.12);
+border:1px solid rgba(125,211,252,0.2);
+font-size:12px;
+font-weight:600;
+color:#bae6fd;
+margin-bottom:24px;
+}
+
+/* Profile */
+
+.profileWrap{
+display:flex;
+justify-content:center;
+margin-bottom:24px;
+}
+
+.profileBorder{
+padding:5px;
+border-radius:50%;
+background:linear-gradient(135deg,#00c2ff,#2563eb);
+box-shadow:0 0 40px rgba(0,194,255,0.45);
+animation:float 3s ease-in-out infinite;
+}
+
+.profileBorder img{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid #111827;
+display:block;
+}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-8px);}
+100%{transform:translateY(0px);}
+}
+
+/* Title */
+
+.title{
+font-size:38px;
+font-weight:800;
+line-height:1.35;
+margin-bottom:14px;
+letter-spacing:0.5px;
+}
+
+.title span{
+color:#7dd3fc;
+}
+
+/* Subtitle */
+
+.subtitle{
+font-size:15px;
+line-height:2;
+color:#d1d5db;
+margin-bottom:28px;
+}
+
+/* Telegram Button */
+
+.joinBtn{
+display:block;
+width:100%;
+padding:19px;
+border-radius:24px;
+background:linear-gradient(90deg,#00c2ff,#2563eb);
+text-decoration:none;
+font-size:20px;
+font-weight:700;
+color:white;
+position:relative;
+overflow:hidden;
+box-shadow:0 0 30px rgba(0,194,255,0.35);
+animation:pulse 1.5s infinite;
+}
+
+.joinBtn::before{
+content:'';
+position:absolute;
+top:0;
+left:-120%;
+width:60%;
+height:100%;
+background:rgba(255,255,255,0.2);
+transform:skewX(-20deg);
+animation:shine 3s infinite;
+}
+
+@keyframes shine{
+100%{
+left:140%;
+}
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.04);}
+100%{transform:scale(1);}
+}
+
+/* Features Box */
+
+.features{
+margin-top:26px;
+background:rgba(255,255,255,0.04);
+padding:22px;
+border-radius:24px;
+text-align:left;
+font-size:15px;
+line-height:2.1;
+color:#f3f4f6;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+/* Counter */
+
+.liveUsers{
+margin-top:20px;
+font-size:14px;
+font-weight:600;
+color:#7dd3fc;
+}
+
+/* Agency Button */
+
+.agencyBtn{
+display:block;
+margin-top:22px;
+padding:16px;
+border-radius:22px;
+background:linear-gradient(90deg,#111827,#1f2937);
+border:1px solid rgba(125,211,252,0.15);
+text-decoration:none;
+font-size:16px;
+font-weight:700;
+color:#7dd3fc;
+box-shadow:0 0 22px rgba(0,194,255,0.12);
+transition:0.3s;
+}
+
+.agencyBtn:hover{
+transform:scale(1.03);
+}
+
+/* Footer */
+
+.footer{
+margin-top:24px;
+font-size:12px;
+line-height:1.9;
+color:#9ca3af;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bgGlow1"></div>
+<div class="bgGlow2"></div>
+
+<div class="container">
+
+<div class="card">
+
+<div class="badge">
+📈 Premium Trading Community
+</div>
+
+<div class="profileWrap">
+
+<div class="profileBorder">
+
+<img src="https://i.ibb.co/svHf0Zpw/IMG-20260221-WA0036.jpg">
+
+</div>
+
+</div>
+
+<div class="title">
+TRADE WITH <br>
+<span>NAVJOT BRAR</span>
+</div>
+
+<div class="subtitle">
+
+📊 Daily Stock Market Learning <br>
+
+🔥 NIFTY • BANKNIFTY • OPTION CALLS <br>
+
+💰 Smart Trading Strategies & Analysis
+
+</div>
+
+<a href="https://t.me/+TJZgBaYXgzFkZjVl"
+target="_blank"
+class="joinBtn">
+
+🚀 JOIN TELEGRAM NOW
+
+</a>
+
+<div class="features">
+
+✅ Daily Trading Signals <br>
+
+✅ Live Market Analysis <br>
+
+✅ Beginner Friendly Community <br>
+
+✅ Smart Trading Strategies <br>
+
+✅ Premium Learning Experience
+
+</div>
+
+<div class="liveUsers" id="liveCounter">
+
+● 6,842 Traders Joined Today
+
+</div>
+
+<a href="https://t.me/+65RvsP9pHTtkNzU1"
+target="_blank"
+class="agencyBtn">
+
+🔥 AD BY @AMITGROWTHAGENCY
+
+</a>
+
+<div class="footer">
+
+⚠️ Stock market investments are subject to market risks.  
+Learn properly before investing.
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+let users = 6842;
+
+setInterval(function(){
+
+users += Math.floor(Math.random()*5);
+
+document.getElementById("liveCounter").innerHTML =
+"● " + users + " Traders Joined Today";
+
+},3000);
+
+</script>
+
+</body>
+</html>
